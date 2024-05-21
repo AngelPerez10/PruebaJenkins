@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/actividad4A_formulario.css">
+    <link id="estilo-actual" rel="stylesheet" href="css/actividad4B_estandar.css">
+    <link rel="stylesheet" href="css/actividad4C.css">
+    <title>Formulario</title>
+</head>
+<style>
+
+    body{
+        cursor: crosshair;  /* Cursor en forma de cruz por defecto */
+    }
+
+    .formulario-fieldset{
+        cursor: text;  /* Cursor similar a una 'I' mayúscula sobre los títulos de sección */
+    }
+
+</style>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Hotel Coral</div>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <label class="switch">
+                    <input type="checkbox" id="modo-switch" onchange="toggleEstilo()">
+                    <span class="slider round"></span>
+                </label>
+            </li>
+        </ul>
+    </nav>
+
+    <fieldset class="formulario-fieldset">
+        <legend class="formulario-legend">
+            <h1>Formulario de Registro</h1>
+        </legend>
+
+        <!-- Nombre de usuario -->
+        <div class="form-group">
+            <label for="nombre" class="form-label">Nombre de Usuario:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-input">
+            <a href="detalles.html" class="link-justificacion">(Justificación)</a>
+        </div>
+
+        <!-- Contraseña -->
+        <div class="form-group">
+            <label for="password1" class="form-label">Contraseña:</label>
+            <input type="password" name="password1" id="password1" placeholder="Contraseña" class="form-input">
+            <a href="detalles.html" class="link-justificacion">(Justificación)</a>
+        </div>
+
+        <!-- Repetir Contraseña -->
+        <div class="form-group">
+            <label for="password2" class="form-label">Repetir Contraseña:</label>
+            <input type="password" name="password2" id="password2" placeholder="Repetir Contraseña" class="form-input">
+            <a href="detalles.html" class="link-justificacion">(Justificación)</a>
+        </div>
+
+        <!-- Direcciones -->
+        <div class="form-group">
+            <label for="direccion" class="form-label">Dirección:</label>
+            <input type="text" name="direccion" id="direccion" placeholder="Dirección" class="form-input">
+            <a href="detalles.html" class="link-justificacion">(Justificación)</a>
+        </div>
+
+        <!-- Ciudad -->
+        <div class="form-group">
+            <label for="ciudad" class="form-label">Ciudad:</label>
+            <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad" class="form-input">
+            <a href="detalles.html" class="link-justificacion">(Justificación)</a>
+        </div>
+
+        <!-- Provincia -->
+        <div class="form-group">
+            <label for="provincia" class="form-label">Provincia:</label>
+            <input type="text" name="provincia" id="provincia" placeholder="Provincia" class="form-input">
+            <a href="detalles.html" class="link-justificacion">(Justificación)</a>
+        </div>
+
+        <!-- Número de huéspedes -->
+        <div class="form-group">
+            <label for="huespedes" class="form-label">Número de Huéspedes:</label>
+            <input type="number" name="huespedes" id="huespedes" placeholder="Número de Huéspedes" class="form-input">
+            <a href="detalles.html" class="link-justificacion">(Justificación)</a>
+        </div>
+
+        <!-- Servicios -->
+        <div class="form-group-checkbox">
+            <label class="form-label">Servicios</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="acondicionado" value="acondicionado"> Aire Acondicionado</label>
+                <label><input type="checkbox" name="almohadas" value="almohadas"> Almohadas a la carta</label>
+                <label><input type="checkbox" name="caja" value="caja"> Caja Fuerte</label>
+                <label><input type="checkbox" name="detector" value="detector"> Detector de humos</label>
+                <label><input type="checkbox" name="minibar" value="minibar"> Minibar</label>
+                <label><input type="checkbox" name="mesa" value="mesa"> Mesa de trabajo</label>
+                <label><input type="checkbox" name="conexion" value="conexion"> Conexión de internet</label>
+                <label><input type="checkbox" name="wifi" value="wifi"> Wifi</label>
+            </div>
+            <a href="detalles.html" class="link-justificacion">(Justificación)</a>
+        </div>
+
+        <!-- Tipo de Habitación -->
+        <div class="form-group-radio">
+            <label class="form-label">Tipo de Habitación</label>
+            <div class="radio-group">
+                <label><input type="radio" name="tipoHabitacion" id="tipoIndividual" value="individual">
+                    Individual</label>
+                <label><input type="radio" name="tipoHabitacion" id="tipoDoble" value="doble"> Doble</label>
+                <label><input type="radio" name="tipoHabitacion" id="tipoSuite" value="suite"> Suite</label>
+            </div>
+        </div>
+
+        <!-- Pensión -->
+        <div class="form-group-radio">
+            <label class="form-label">Pensión</label>
+            <div class="radio-group">
+                <label><input type="radio" name="pension" id="alojamiento" value="alojamiento"> Alojamiento</label>
+                <label><input type="radio" name="pension" id="desayuno" value="desayuno"> Desayuno</label>
+                <label><input type="radio" name="pension" id="media" value="media"> Media Pensión</label>
+                <label><input type="radio" name="pension" id="completa" value="completa"> Pensión Completa</label>
+            </div>
+        </div>
+
+        <!-- Comentario o Sugerencia -->
+        <div class="form-group">
+            <label class="form-label">Comentario o Sugerencia</label>
+            <textarea name="textarea" rows="5" cols="50" placeholder="Comentario o Sugerencia" class="form-textarea"></textarea>
+            <a href="detalles.html" class="link-justificacion">(Justificación)</a>
+        </div>
+
+        <!-- Email contacto -->
+        <div class="form-group">
+            <label for="correo" class="form-label">Email de contacto</label>
+            <input type="email" id="correo" placeholder="Email de contacto" class="form-input">
+            <a href="detalles.html" class="link-justificacion">(Justificación)</a>
+        </div>
+
+        <!-- Políticas de privacidad -->
+        <div class="form-group-checkbox">
+            <label><input type="checkbox" name="acepto" value="acepto"> Acepto la política de privacidad</label>
+            <a href="detalles.html" class="link-justificacion">(Justificación)</a>
+        </div>
+
+        <!-- Botones -->
+        <div class="form-group-buttons">
+            <input type="button" value="Enviar" class="form-button">
+            <input type="button" value="Limpiar" class="form-button">
+        </div>
+    </fieldset>
+
+    <script>
+        function toggleEstilo() {
+            var switchBtn = document.getElementById("modo-switch");
+            var estiloActual = document.getElementById("estilo-actual");
+
+            if (switchBtn.checked) {
+                estiloActual.setAttribute('href', 'css/actividad4B_accesible.css');
+            } else {
+                estiloActual.setAttribute('href', 'css/actividad4B_estandar.css');
+            }
+        }
+    </script>
+
+    <script src="js/styleSwitcher.js"></script>
+</body>
+
+</html>
