@@ -1,0 +1,123 @@
+:root {
+    --color-primario: #2196F3; 
+    --color-secundario: #4CAF50; 
+    --color-fondo: #333; 
+    --color-texto: #fff; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 0;
+    color: var(--color-texto);
+    cursor: crosshair;
+}
+
+.navbar {
+    background-color: var(--color-fondo);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 10px;
+}
+
+.nav-item button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nav-item button:hover {
+    text-decoration: underline;
+}
+
+.formulario-fieldset {
+    width: 50%;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid var(--color-primario);
+    border-radius: 10px;
+    background-color: #555; /* Cambio el color de fondo del formulario a un gris más oscuro */
+}
+
+.formulario-legend {
+    font-size: 24px;
+    color: var(--color-texto); /* Cambio el color del texto a blanco */
+    text-align: center;
+    cursor: text;
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--color-texto); /* Cambio el color del texto a blanco */
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-primario);
+    border-radius: 5px;
+    background-color: #444; /* Cambio el color de fondo de los inputs y textareas a un gris más oscuro */
+    color: var(--color-texto); /* Cambio el color del texto a blanco */
+}
+
+.form-button {
+    padding: 10px 20px;
+    background-color: var(--color-primario);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-button:hover {
+    background-color: var(--color-secundario);
+}
+
+.link-justificacion {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: var(--color-primario);
+}
+
+.link-justificacion:hover {
+    color: var(--color-secundario);
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-primario);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-input::placeholder, .form-textarea::placeholder {
+    color: #ddd; /* Cambio el color del placeholder a un gris más claro */
+    opacity: 1; 
+}
+
+.form-input:focus::placeholder, .form-textarea:focus::placeholder {
+    color: #bbb; /* Cambio el color del placeholder cuando el input o textarea está enfocado a un gris más claro */
+}
