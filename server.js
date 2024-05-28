@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, 'pagina web')));
 
 // Ruta para el archivo HTML principal
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'pagina web', 'index.html'));
+  res.sendFile(path.join(__dirname, 'pagina web', 'welcome.html'));
 });
 
 app.listen(port, () => {
